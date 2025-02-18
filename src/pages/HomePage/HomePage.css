@@ -1,0 +1,42 @@
+.home-page-container {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column; /* Navbar stays on top */
+  }
+  
+  .home-content {
+    display: flex;
+    flex: 1; /* Take up remaining space below navbar */
+    position: relative; /* Needed for absolute positioning of image */
+  }
+  
+  .left-section {
+    width: 85%;
+    background-color: #161D20;
+  }
+  
+  .right-section {
+    width: 15%;
+    background-color: white;
+  }
+  
+  .car-img {
+    position: absolute;
+    width: 60%; 
+    max-width: 800px; 
+    left: 42%; 
+    top: 50%;
+    transform: translateY(-50%); 
+  }
+
+  .heading{
+    color: white;
+    font-size: 90px;
+    font-weight: bold; /* Makes the text bold */
+    margin-left: 190px; /* Adjust left margin */
+    margin-right: 500px;
+    margin-top: 75px;
+    text-align: center;
+    
+  }
+  
