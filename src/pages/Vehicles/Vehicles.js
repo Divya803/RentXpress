@@ -26,7 +26,7 @@ const Vehicles = () => {
         <input type="text" placeholder="Search" className="search-input" />
 
         <select
-          className="category-dropdown"
+          className="category-select"
           value={category}
           onChange={handleCategoryChange}
         >

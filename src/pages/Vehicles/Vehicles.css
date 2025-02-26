@@ -125,31 +125,39 @@ body {
   .hero-content p {
     font-size: 1.2rem;
     color: #fff;
+    margin-left: 70px;
+    margin-right: 70px;
   }
   
   /* Search and Category Container */
   .search-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 5px;
+    margin: 10px;
   }
   
   .search-input {
     padding: 10px;
-    width: 70%;
+    width: 40%;
     font-size: 1rem;
     border: 1px solid #111111;
     border-radius: 5px;
+    margin-left: 50%;
+    margin-right: 20px;
   }
   
   .category-select {
     padding: 10px;
-    width: 25%;
+    width: 120px;
     font-size: 1rem;
     border: 1px solid #060404;
     border-radius: 5px;
+    height: 40px;
+    margin-top: 7px;
+    margin-right: 20px;
   }
+  
   
   /* Vehicle List Layout */
   .vehicle-list {
@@ -175,7 +183,8 @@ body {
   /* Vehicle Card */
   .vehicle-card {
     background-color: #fff;
-    padding: 20px;
+    padding: 9px;
+    margin: 17px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;

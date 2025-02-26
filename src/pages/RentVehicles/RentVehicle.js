@@ -22,8 +22,8 @@ const RentVehicle = () => {
             <input type="date" placeholder="End Date" />
           </div>
           <div className="buttons">
-            <Button value="RENT WITH DRIVER"/>
-            <Button value="RENT WITH DRIVER"/>
+            <Button value="Rent with driver"/>
+            <Button value="Rent without driver"/>
           </div>
         </div>
         <div className="image-container">
