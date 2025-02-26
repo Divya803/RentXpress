@@ -20,14 +20,24 @@
     background-color: white;
   }
   
-  .car-img {
+  @keyframes slideIn {
+    from {
+        left: 60%;
+    }
+    to {
+        right: 70%;
+    }
+}
+
+.car-img {
     position: absolute;
     width: 60%; 
     max-width: 800px; 
     left: 42%; 
     top: 50%;
-    transform: translateY(-50%); 
-  }
+    transform: translateY(-50%);
+    animation: slideIn 2s ease-out; /* Apply the animation */
+}
 
   .heading{
     color: white;
@@ -40,3 +50,14 @@
     
   }
   
+  .description {
+    color: white;
+    margin-left: 130px;
+    margin-right: 500px;
+    margin-top: 30px;
+  }
+
+  .btn{
+    margin-left: 150px;
+    margin-top: 30px;
+  }

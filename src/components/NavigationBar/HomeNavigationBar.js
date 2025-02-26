@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavigationBar.css"; // Same CSS for consistency
-// import logo from "../../assets/Rentxpress.png"; 
+import "./NavigationBar.css"; 
 import Button from "../Button/Button";
+import logo from "../../assets/logo.png";
 
 const HomeNavigationBar = () => {
   return (
@@ -10,7 +10,7 @@ const HomeNavigationBar = () => {
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
-          {/* <img src={logo} alt="App Logo" className="logo-img" /> */}
+          <img src={logo} alt="App Logo" className="logo-img" />
         </div>
 
         {/* Navigation Links */}
@@ -23,7 +23,7 @@ const HomeNavigationBar = () => {
 
       {/* Login Button on the Right */}
       <div className="nav-button">
-      <Button value=" Login"/>
+      <Button value="Signup" style={{ fontSize: "16px" }} />
       </div>
     </nav>
   );
