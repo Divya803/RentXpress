@@ -1,130 +1,54 @@
-// import React from 'react';
-
-// function HomePage() {
-//   return (
-//     <div>
-//       <h1>Welcome to the dashboard</h1>
-//     </div>
-//   );
-// }
-
-// export default HomePage;
-
 import React, { useState, useEffect } from "react";
 import "./AdminDashboard.css";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { FaUsers } from "react-icons/fa";
-import { FaUserCheck } from "react-icons/fa";
-import { FaUserCog } from "react-icons/fa";
+import { FaUsers, FaUserShield, FaUserCog, FaUserTag } from "react-icons/fa";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import AdminCard from "../../components/AdminCard/AdminCard";
 import Button from "../../components/Button/Button";
 import Table, { TableRow } from "../../components/Table/Table";
 
 export default function AdDashboard() {
-  const [adminCount, setAdminCount] = useState(0);
-  const [userCount, setUserCount] = useState(0);
   const [pendingUsers, setPendingUsers] = useState([]);
-  const [verifiedUserCount, setVerifiedUserCount] = useState(0);
   const [verificationIssues, setVerificationIssues] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchAdminCount = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8003/admin/getAdminCount"
-        );
-        setAdminCount(response.data.count);
-      } catch (error) {
-        console.log("Error fetching admin count:", error);
-      }
-    };
+  // Static JSON data for pending verification requests
+  const pendingUsersData = [
+    { userId: 1, userName: "Alice Smith", requestDate: "2025-03-18" },
+    { userId: 2, userName: "John Doe", requestDate: "2025-03-17" },
+    { userId: 3, userName: "Emma Brown", requestDate: "2025-03-16" },
+  ];
 
-    fetchAdminCount();
+  // Static JSON data for verification issues
+  const verificationIssuesData = [
+    { userId: 4, userName: "Michael Lee", issue: "Invalid documents" },
+    { userId: 5, userName: "Sophia Wilson", issue: "Mismatched ID details" },
+    { userId: 6, userName: "David Johnson", issue: "Unclear image" },
+  ];
+
+  useEffect(() => {
+    setPendingUsers(pendingUsersData);
   }, []);
 
   useEffect(() => {
-    const fetchPendingUsers = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8004/admin/getPendingUsers"
-        );
-        setPendingUsers(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error fetching pending users:", error);
-      }
-    };
-
-    fetchPendingUsers();
-  }, []);
-
-  useEffect(() => {
-    const fetchUserCount = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8004/admin/getUserCount"
-        );
-        setUserCount(response.data.count);
-      } catch (error) {
-        console.error("Error fetching user count:", error);
-      }
-    };
-
-    fetchUserCount();
-  }, []);
-
-  useEffect(() => {
-    const fetchVerifiedUserCount = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8004/admin/getVerifiedUserCount"
-        );
-        setVerifiedUserCount(response.data.count);
-      } catch (error) {
-        console.error("Error fetching verified user count:", error);
-      }
-    };
-
-    fetchVerifiedUserCount();
-  }, []);
-
-  useEffect(() => {
-    const fetchVerificationIssues = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8004/admin/getUsersWithVerificationIssues"
-        );
-        setVerificationIssues(response.data);
-        console.log("issue:",response.data);
-      } catch (error) {
-        console.error("Error fetching verification issues:", error);
-      }
-    };
-
-    fetchVerificationIssues();
+    setVerificationIssues(verificationIssuesData);
   }, []);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
-    if (isNaN(date.getTime())) {
-      return "Invalid Date";
-    }
-    return date.toISOString().split("T")[0];
+    return isNaN(date.getTime()) ? "Invalid Date" : date.toISOString().split("T")[0];
   };
 
   return (
     <div style={{ backgroundColor: "white", minHeight: "100vh" }}>
       <NavigationBar />
-    
+
       <div style={{ display: "flex" }}>
         <AdminCard>
           <div style={{ display: "flex" }}>
             <div>
               <div className="Dash-card">Users</div>
-              <div className="count">{userCount}</div>
+              <div className="count">100</div>
             </div>
             <div className="user-icon">
               <FaUsers />
@@ -134,19 +58,30 @@ export default function AdDashboard() {
         <AdminCard>
           <div style={{ display: "flex" }}>
             <div>
-              <div className="Dash-card">Verified</div>
-              <div className="count">{verifiedUserCount}</div>
+              <div className="Dash-card">Drivers</div>
+              <div className="count">50</div>
             </div>
             <div className="user-icon">
-              <FaUserCheck />
+              <FaUserShield />
             </div>
           </div>
         </AdminCard>
         <AdminCard>
           <div style={{ display: "flex" }}>
             <div>
-              <div className="Dash-card">Admin</div>
-              <div className="count">{adminCount}</div>
+              <div className="Dash-card">V.Owners</div>
+              <div className="count">30</div>
+            </div>
+            <div className="user-icon">
+              <FaUserTag />
+            </div>
+          </div>
+        </AdminCard>
+        <AdminCard>
+          <div style={{ display: "flex" }}>
+            <div>
+              <div className="Dash-card">Admins</div>
+              <div className="count">15</div>
             </div>
             <div className="user-icon">
               <FaUserCog />
@@ -154,16 +89,13 @@ export default function AdDashboard() {
           </div>
         </AdminCard>
       </div>
+
       <div style={{ display: "flex" }}>
+        {/* Verification Requests Table */}
         <div className="requests">
-          <p style={{ fontSize: "1.75rem", fontWeight: "500" }}>
-            Verify Requests
-          </p>
+          <p style={{ fontSize: "1.75rem", fontWeight: "500" }}>Verify Requests</p>
           <div style={{ height: "410px" }}>
-            <Table
-              hover={true}
-              style={{ height: "65vh", overflowY: "auto", fontSize: "1.10rem" }}
-            >
+            <Table hover={true} style={{ height: "65vh", overflowY: "auto", fontSize: "1.10rem" }}>
               <TableRow data={["Name", "Date", "Status"]} />
               {pendingUsers.slice(0, 7).map((user) => (
                 <TableRow
@@ -176,31 +108,20 @@ export default function AdDashboard() {
                       style={{ width: "100px" }}
                       value=" Verify"
                       outlined
-                      onClick={() =>
-                        navigate(`/Admin/AdminUserVerification/${user.userId}`)
-                      }
+                      onClick={() => navigate(`/Admin/AdminUserVerification/${user.userId}`)}
                     />,
                   ]}
                 />
               ))}
             </Table>
           </div>
-          <div className="ViewAll-btn">
-            <Link to="/admin/ViewAll">
-              <Button type="button" value=" View All" />
-            </Link>
-          </div>
         </div>
+
+        {/* Verification Issues Table */}
         <div className="issues">
-          <p style={{ fontSize: "1.75rem", fontWeight: "500" }}>
-            {" "}
-            Verification Issues
-          </p>
+          <p style={{ fontSize: "1.75rem", fontWeight: "500" }}>Verification Issues</p>
           <div style={{ height: "410px" }}>
-            <Table
-              hover={true}
-              style={{ height: "65vh", overflowY: "auto", fontSize: "1.10rem" }}
-            >
+            <Table hover={true} style={{ height: "65vh", overflowY: "auto", fontSize: "1.10rem" }}>
               <TableRow data={["Name", "Issue", "Status"]} />
               {verificationIssues.slice(0, 7).map((user) => (
                 <TableRow
@@ -214,23 +135,15 @@ export default function AdDashboard() {
                       style={{ width: "100px" }}
                       outlined
                       red
-                      onClick={() =>
-                        navigate(`/Admin/AdminUserVerification/${user.userId}`)
-                      }
+                      onClick={() => navigate(`/Admin/AdminUserVerification/${user.userId}`)}
                     />,
                   ]}
                 />
               ))}
             </Table>
           </div>
-          <div className="ViewAll-btn">
-            <Link to="/admin/ViewIssues">
-              <Button type="button" value=" View All" />
-            </Link>
-          </div>
         </div>
       </div>
     </div>
   );
 }
-

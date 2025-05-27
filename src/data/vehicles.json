@@ -1,213 +1,144 @@
 [
-    {
-      "id": 1,
-      "name": "NIO ET5",
-      "price": "$70,000",
-      "image": "https://image.made-in-china.com/202f0j00QMlbEpcYugkz/Nio-Et5-5-Seat-Electric-Car-New-Energy-Vehicle.webp",
-      "category": "Car"
-    },
-    {
-      "id": 2,
-      "name": "Tesla Model 3",
-      "price": "$55,000",
-      "image": "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1698926827/autoexpress/2023/11/New%20Tesla%20Model%203%20-21.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 3,
-      "name": "BMW i4",
-      "price": "$65,000",
-      "image": "https://content.homenetiol.com/2000292/2143540/0x0/479526ce68b345818c1d748baa156103.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 4,
-      "name": "Mercedes EQS",
-      "price": "$100,000",
-      "image": "https://grandex.de/wp-content/uploads/2024/02/grandex-30-05-2022-mecedes-eqs-2-von-38-scaled.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 5,
-      "name": "Audi e-tron",
-      "price": "$80,000",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2020_Audi_e-Tron_Sport_50_Quattro.jpg/1200px-2020_Audi_e-Tron_Sport_50_Quattro.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 6,
-      "name": "Lucid Air",
-      "price": "$120,000",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/2022_Lucid_Air_Grand_Touring_in_Zenith_Red%2C_front_left.jpg/800px-2022_Lucid_Air_Grand_Touring_in_Zenith_Red%2C_front_left.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 7,
-      "name": "Porsche Taycan",
-      "price": "$150,000",
-      "image": "https://hips.hearstapps.com/hmg-prod/images/2025-porsche-taycan-115-672385e70b435.jpg?crop=0.683xw:0.767xh;0.170xw,0.233xh&resize=768:*",
-      "category": "Car"
-    },
-    {
-      "id": 8,
-      "name": "Ford Mustang Mach-E",
-      "price": "$60,000",
-      "image": "https://www.electrifying.com/files/OWOD3x8ykYaQTjEk/mustangred.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 9,
-      "name": "Chevrolet Bolt EV",
-      "price": "$40,000",
-      "image": "https://media.ed.edmunds-media.com/chevrolet/bolt-ev/2023/oem/2023_chevrolet_bolt-ev_4dr-hatchback_2lt_fq_oem_1_1280.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 10,
-      "name": "Hyundai Ioniq 5",
-      "price": "$45,000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcotUw7pJLX65LCCY6o3uCXOfeQ4lxvmvkgg&s",
-      "category": "Car"
-    },
-    {
-      "id": 11,
-      "name": "Kia EV6",
-      "price": "$50,000",
-      "image": "https://i.gaw.to/vehicles/photos/40/38/403873-2025-kia-ev6.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 12,
-      "name": "Volkswagen ID.4",
-      "price": "$52,000",
-      "image": "https://uploads.vw-mms.de/system/production/images/vwn/080/258/images/5dc9f14a8af8d8243438d0b855b2b07cf78a0345/DB2023AU00848_web_1600.jpg?1736336556",
-      "category": "Car"
-    },
-    {
-      "id": 13,
-      "name": "Rivian R1T",
-      "price": "$90,000",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPh6u_mDQjqR3_d6kWVxANzJ3bFQAqWqE3XQ&s",
-      "category": "Car"
-    },
-    {
-      "id": 14,
-      "name": "Nissan Ariya",
-      "price": "$48,000",
-      "image": "https://static.independent.co.uk/2024/09/11/12/2023-Nissan-Ariya_US-28.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 15,
-      "name": "Toyota bZ4X",
-      "price": "$42,000",
-      "image": "https://ncitadvantage-com.cdn-convertus.com/uploads/sites/74/2022/05/2023-Toyota-bZ4X-Toyotas-First-All-Electric-SUV.jpg",
-      "category": "Car"
-    },
-    {
-      "id": 16,
-      "name": "Ford Transit",
-      "price": "$35,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Van"
-    },
-    {
-      "id": 17,
-      "name": "Mercedes-Benz V-Class",
-      "price": "$60,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Van"
-    },
-    {
-      "id": 18,
-      "name": "Volkswagen Transporter",
-      "price": "$45,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Van"
-    },
-    {
-      "id": 19,
-      "name": "Ford E-Transit",
-      "price": "$55,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Van"
-    },
-    {
-      "id": 20,
-      "name": "Mercedes Sprinter",
-      "price": "$70,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Van"
-    },
-    {
-      "id": 21,
-      "name": "Lion Electric Bus",
-      "price": "$250,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Bus"
-    },
-    {
-      "id": 22,
-      "name": "BYD K9 Electric Bus",
-      "price": "$300,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Bus"
-    },
-    {
-      "id": 23,
-      "name": "Proterra Catalyst Bus",
-      "price": "$350,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Bus"
-    },
-    {
-      "id": 24,
-      "name": "Tata Motors Electric Bus",
-      "price": "$275,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Bus"
-    },
-    {
-      "id": 25,
-      "name": "Honda Motorbike",
-      "price": "$8,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Motorbike"
-    },
-    {
-      "id": 26,
-      "name": "Yamaha MT-07",
-      "price": "$9,500",
-      "image": "../../assets/yellow car.png",
-      "category": "Motorbike"
-    },
-    {
-      "id": 27,
-      "name": "Kawasaki Ninja 400",
-      "price": "$10,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Motorbike"
-    },
-    {
-      "id": 28,
-      "name": "BMW R1250 GS",
-      "price": "$18,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Motorbike"
-    },
-    {
-      "id": 29,
-      "name": "Hero Splendor Plus",
-      "price": "$2,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Motorbike"
-    },
-    {
-      "id": 30,
-      "name": "Lorry 18 Wheeler",
-      "price": "$150,000",
-      "image": "../../assets/yellow car.png",
-      "category": "Lorry"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Toyota Axio",
+    "price": 8000,
+    "image": "https://kai-and-karo.ams3.cdn.digitaloceanspaces.com/media/vehicles/images/IMG-20240118-WA0001.jpg",
+    "category": "Car"
+  },
+  {
+    "id": 2,
+    "name": "Honda Fit GP5",
+    "price": 7500,
+    "image": "https://i.pinimg.com/736x/5b/5f/e9/5b5fe909263ff7f7b3822eef89e359bb.jpg",
+    "category": "Car"
+  },
+  {
+    "id": 3,
+    "name": "Suzuki Alto K10",
+    "price": 4500,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtw7keflgiJvkpBLDQTHETa58H9uwKt-eqc8ojkItfo-cTjjmUPTzDF_ymUwFzfgDcEes&usqp=CAU",
+    "category": "Car"
+  },
+  {
+    "id": 4,
+    "name": "Nissan X-Trail",
+    "price": 12000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT12xoUE4U8GmZvv4D7izuOW7POk7w-R2tRKg&s",
+    "category": "Car"
+  },
+  {
+    "id": 5,
+    "name": "Toyota HiAce",
+    "price": 16000,
+    "image": "https://image-cdn.beforward.jp/large/201704/750237/BF627193_00c171.jpg",
+    "category": "Van"
+  },
+  {
+    "id": 6,
+    "name": "Nissan Caravan",
+    "price": 14000,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nissan_Caravan_E24_003.JPG/1200px-Nissan_Caravan_E24_003.JPG",
+    "category": "Van"
+  },
+  {
+    "id": 7,
+    "name": "Suzuki Every",
+    "price": 6000,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Suzuki_Every_PA_4WD_DA64V_0371.JPG/1200px-Suzuki_Every_PA_4WD_DA64V_0371.JPG",
+    "category": "Van"
+  },
+  {
+    "id": 8,
+    "name": "Bajaj RE Three-Wheeler",
+    "price": 1300,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Bajaj_auto-rickshaw_in_Sri_Lanka.jpg/800px-Bajaj_auto-rickshaw_in_Sri_Lanka.jpg",
+    "category": "Threewheel"
+  },
+  {
+    "id": 9,
+    "name": "TVS Apache RTR 160",
+    "price": 800,
+    "image": "https://www.team-bhp.com/sites/default/files/styles/check_extra_large_for_review/public/rtr.jpeg",
+    "category": "Motorbike"
+  },
+  {
+    "id": 10,
+    "name": "Bajaj Pulsar NS200",
+    "price": 850,
+    "image": "https://bikesguide.ikman.lk/wp-content/uploads/2024/02/ns-200-featured.jpg",
+    "category": "Motorbike"
+  },
+  {
+    "id": 11,
+    "name": "Ashok Leyland Viking Bus",
+    "price": 25000,
+    "image": "https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/70b10596e3691e7c485baf3532e8e493/large.JPG",
+    "category": "Bus"
+  },
+  {
+    "id": 12,
+    "name": "Tata LPO Bus",
+    "price": 23000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpgXG_BpcMDT4VvVe535M4GhSDWOzpeHBXkg&s",
+    "category": "Bus"
+  },
+  {
+    "id": 13,
+    "name": "Isuzu NPR Lorry",
+    "price": 10000,
+    "rental_price": 10000,
+    "image": "https://s.alicdn.com/@sc04/kf/HTB1A8AEouuSBuNjSsziq6zq8pXai.jpg_720x720q50.jpg",
+    "category": "Lorry"
+  },
+  {
+    "id": 14,
+    "name": "Tata Dimo Batta",
+    "price": 5000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs1UNuSOmgZNH3MbRHhkkAOw78GVqsmhvHrg&s",
+    "category": "Lorry"
+  },
+  {
+    "id": 15,
+    "name": "Fuso Canter",
+    "price": 9500,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6E-u726YPO1MtK1CWKAQ9eGF8qf71WG-ltYCyR0fHUzrFvYoTS1ZKAq_UrH25zMivzuY&usqp=CAU",
+    "category": "Lorry"
+  },
+  {
+    "id": 16,
+    "name": "Toyota Land Cruiser Prado",
+    "price": 23000,
+    "image": "https://carsforsale.co.ke/wp-content/uploads/2024/01/2018-Toyota-Land-Cruiser-Prado-TX-GDJ150.jpg",
+    "category": "Car"
+  },
+  {
+    "id": 17,
+    "name": "Mazda CX-5",
+    "price": 17000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3dKQOBqFdBasl9UiqVhOFUvKTMd2Hly8FrQ&s",
+    "category": "Car"
+  },
+  {
+    "id": 18,
+    "name": "Honda Civic",
+    "price": 14000,
+    "rental_price": 14000,
+    "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148155.jpeg?q=80",
+    "category": "Car"
+  },
+  {
+    "id": 19,
+    "name": "Toyota Hilux",
+    "price": 20000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPovpbDho-54qvnUXKmBnGZzZ93mSimN9gFQ&s",
+    "category": "Car"
+  },
+  {
+    "id": 20,
+    "name": "Mitsubishi L200",
+    "price": 19000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCiiwXhiD9-JAtgKXm5vARHraCda72VQX35A&s",
+    "category": "Car"
+  }
+]
