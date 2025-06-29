@@ -1,25 +1,58 @@
 import React, { useState } from "react";
-import "./Login.css"; 
-// import logo from "./logo.png"; 
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 import Image from "../../assets/login car.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/api/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem("token", data.token); // Save token
+        alert("Login successful!");
+        navigate("/vehicles");
+      } else {
+        alert(data.message || "Login failed");
+      }
+    } catch (err) {
+      alert("An error occurred");
+      console.error(err);
+    }
+  };
 
   return (
     <div className="login-container">
       <img src={Image} alt="Car" className="car-image" />
       <div className="login-box">
-        {/* <img src={logo} alt="RentXpress Logo" className="login-logo" /> */}
         <h2>Log in</h2>
         <p className="signup-text">
           New to RentXpress? <a href="/signup">Sign up for free</a>
         </p>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <div className="input-group">
             <label htmlFor="email">Email address</label>
-            <input type="email" id="email" required />
+            <input
+              type="email"
+              id="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="input-group password-group">
@@ -29,6 +62,8 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <span
                 className="toggle-password"
@@ -51,3 +86,4 @@ const Login = () => {
 };
 
 export default Login;
+
